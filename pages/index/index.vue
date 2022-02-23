@@ -1,8 +1,13 @@
+<!-- 首页 -->
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+		<u-no-network @retry="init"></u-no-network>
+		<!-- <shopro-empty v-if="!hasTemplate" :image="$IMG_URL + '/imgs/empty/template_empty.png'" tipText="暂未找到模板，请前往装修~">
+		</shopro-empty> -->
+		<view class="content">
+			<home-head>
+				
+			</home-head>
 		</view>
 	</view>
 </template>
@@ -11,42 +16,20 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				
 			}
 		},
 		onLoad() {
 
 		},
 		methods: {
-
+			init(){}
+			
 		}
 	}
 </script>
 
-<style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
+<style lang="scss">
+	
 
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
 </style>

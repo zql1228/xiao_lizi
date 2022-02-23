@@ -1,24 +1,146 @@
-{
+ {
 	"easycom":{
 		"^u-(.*)":"@/uview-ui/compontents/u-$1/u-$1.vue"	
 	},
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
+	"pages": [{ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 			"path": "pages/index/index",
 			"aliasPath":"/",//对于html5端在首页必须加上aliasPath并设置未/
 			"style": {
 				"navigationBarTitleText": "首页",
 				"navigationBarTextStyle":"white",
 				"enablePullDownRefresh":true,
-				"navigationStyle":"custom"
+				"navigationStyle":"custom",
+				"mp-alipay":{
+					"transparentTitle":"always",
+					"titlePenetrate":"YES",
+					"allowsBounceVertical":"NO"
+				}				
+			},
+			"meta":{
+				"auth":false,//需要登录
+				"async":true,//是否同步
+				"title":"首页",//标题
+				"group":"商城"//分组
+			}
+		},
+		{
+			"path":"pages/index/category",
+			"style":{
+				"navigationBarTitleText":"分类"
+				
+			},
+			"meta":{
+				"auth":false,
+				"async":true,
+				"title":"购物车",
+				"group":"商城"
+			}
+		},
+		{
+			"path":"pages/index/user",
+			"style":{
+				"navigationBarTitleText":"我的",
+				"navigationStyle":"custom",
+				"navigationBarTextStyle":"white",
+				"enablePullDownRefresh":true
+				
+			},
+			"meta":{
+				"auth":false,
+				"async":true,
+				"title":"我的",
+				"group":"商城"
+				
 				
 			}
-		}
-	],
+		},
+		{
+			"path":"pages/index/view",
+			"name":"view",
+			"style":{
+				"navigationBarTitleText":"",
+				"enablePullDownRefresh":true
+			},
+			"meta":{
+				"auth":false,
+				"async":true,
+				"title":"自定义页面",
+				"group":"商城"
+			}
+		}				
+	    ,{
+            "path" : "pages/index/category",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/user",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/view",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/user",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarTitleText": "shopro-plus",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar":{
+		"color":"#333333",
+		"selectedColor":"#a8700d",
+		"backgroundColor":"#FFFFFF",
+		"borderStyle":"black",
+		"list":[
+			{
+			"pagePath":"pages/index/index",
+			"text":"首页",
+			"iconPath":"./static/images/tabbar/tabbar_home.png",
+			"selectedIconPath":"static/images/tabbar/tabbar_home1.png"
+		},
+		{
+			"pagePath":"pages/index/category",
+			"text":"分类",
+			"iconPath":"static/images/tabbar/tabbar_category.png",
+			"selectedIconPath":"static/images/tabbar/tabbar_category1.png"
+		},
+		{
+			"pagePath":"pages/index/cart",
+			"text":"购物车",
+			"iconPath":"static/images/tabbar/tabbar_cart.png",
+			"selectedIconPath":"static/images/tabbar/tabbar_cart1.png"
+		},
+		{
+			"pagePath":"pages/index/user",
+			"text":"我的",
+			"iconPath":"static/images/tabbar/tabbar_personal.png",
+			"selectedIconPath":"static/images/tabbar/tabbar_personal1.png"
+		}
+		]
 	}
 }
