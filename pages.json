@@ -1,7 +1,7 @@
  {
-	"easycom":{
-		"^u-(.*)":"@/uview-ui/compontents/u-$1/u-$1.vue"	
-	},
+	"easycom": {
+			"^u-(.*)": "@/uni_modules/uview-ui/components/u-$1/u-$1.vue"
+		},
 	"pages": [{ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 			"path": "pages/index/index",
 			"aliasPath":"/",//对于html5端在首页必须加上aliasPath并设置未/
@@ -24,7 +24,7 @@
 			}
 		},
 		{
-			"path":"pages/index/category",
+			"path":"pages/category/category",
 			"style":{
 				"navigationBarTitleText":"分类"
 				
@@ -37,7 +37,7 @@
 			}
 		},
 		{
-			"path":"pages/index/user",
+			"path":"pages/user/user",
 			"style":{
 				"navigationBarTitleText":"我的",
 				"navigationStyle":"custom",
@@ -67,40 +67,13 @@
 				"title":"自定义页面",
 				"group":"商城"
 			}
-		}				
-	    ,{
-            "path" : "pages/index/category",
+		},
+		{
+            "path" : "pages/user/cart",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/index/user",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/index/view",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/index/user",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+                "navigationBarTitleText": "购物车",
+                "enablePullDownRefresh":false
             }
             
         }
@@ -124,19 +97,19 @@
 			"selectedIconPath":"static/images/tabbar/tabbar_home1.png"
 		},
 		{
-			"pagePath":"pages/index/category",
+			"pagePath":"pages/category/category",
 			"text":"分类",
 			"iconPath":"static/images/tabbar/tabbar_category.png",
 			"selectedIconPath":"static/images/tabbar/tabbar_category1.png"
 		},
 		{
-			"pagePath":"pages/index/cart",
+			"pagePath":"pages/cart/cart",
 			"text":"购物车",
 			"iconPath":"static/images/tabbar/tabbar_cart.png",
 			"selectedIconPath":"static/images/tabbar/tabbar_cart1.png"
 		},
 		{
-			"pagePath":"pages/index/user",
+			"pagePath":"pages/user/user",
 			"text":"我的",
 			"iconPath":"static/images/tabbar/tabbar_personal.png",
 			"selectedIconPath":"static/images/tabbar/tabbar_personal1.png"
